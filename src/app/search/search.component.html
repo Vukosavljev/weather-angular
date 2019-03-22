@@ -1,0 +1,8 @@
+<div class="search">
+  <h3>Please insert city:</h3>
+  <div>
+    <input [(ngModel)]="city" placeholder="Enter city here">
+  </div>
+  <button (click)="submitSearch(city)">Search</button>
+  <app-list [cityList]="results"></app-list>
+</div>

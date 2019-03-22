@@ -1,0 +1,6 @@
+<div class="results">
+  <h3>Results for search: </h3>
+  <div *ngFor="let city of cityList">
+      <a routerLink="/detail/{{city.title}}">{{city.title }}</a>
+  </div>
+</div>

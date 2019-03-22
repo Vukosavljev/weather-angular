@@ -1,0 +1,7 @@
+<div class="weatherContainer">
+  <div *ngIf='!weather.length' class="spinner">Loading...</div>
+  <div class="weatherCard" *ngFor="let day of weather">
+    Max temperature: {{day.max_temp}}
+    Mix temperature: {{day.min_temp}}
+  </div>
+</div>
