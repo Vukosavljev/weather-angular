@@ -1,0 +1,53 @@
+.weatherContainer {
+    width: 80%;
+    margin: 0 auto;
+
+    h2 {
+        margin-top: 2rem;
+    }
+
+    h4 {
+        margin: 1rem;
+    }
+
+    .flex {
+        display: flex;
+        margin: 2rem 0;
+        justify-content: center;
+        align-items: center;
+        img {
+            width: 60%;
+            max-height: 100px;
+        }
+        p {
+            width: 40%;
+        }
+    }
+    .details {
+        border: 1px solid #ccc;
+        background-color: #fff;
+        padding: 1rem;
+    }
+    p {
+        margin-bottom: 1rem; 
+    }
+}
+.btn-Fixed {
+    position: fixed;
+    left: 0;
+    top: 50%;
+    cursor: pointer;
+}
+
+
+@media screen and (min-width: 900px) {
+
+    .btn-Fixed {
+        top: 5%;
+    }
+
+    .box {
+        width: 45%;
+        margin-right: 20px;
+    }
+}

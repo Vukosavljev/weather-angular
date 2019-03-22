@@ -1,7 +1,22 @@
-<div class="weatherContainer">
-  <div *ngIf='!weather.length' class="spinner">Loading...</div>
-  <div class="weatherCard" *ngFor="let day of weather">
-    Max temperature: {{day.max_temp}}
-    Mix temperature: {{day.min_temp}}
+<div *ngIf='!weather.length' class="box">Loading...</div>
+<button class="btn-Fixed" (click)="backClicked()" >Previous page</button>
+
+<div class="weatherContainer" *ngIf='weather.length' >
+  <h2>{{ cityName }}</h2>
+  <div class="box" *ngFor="let day of weather let i = index">
+    <h4 *ngIf="i === 0">Today</h4>
+    <h4 *ngIf="i !== 0">{{ day.applicable_date | date :'EEEE' }}</h4>
+    <hr>
+    <div class="flex">
+      <img src="https://www.metaweather.com/static/img/weather/{{day.weather_state_abbr}}.svg" alt="icon">
+      <p>{{ day.weather_state_name }}</p>
+    </div>
+    <div class="details">
+      <p>Predictability: {{ day.predictability }} %</p>
+      <p>Humidity: {{ day.humidity }} %</p>
+      <p>Max temperature: {{ day.max_temp | number : '1.2-2' }} </p>
+      <p>Mix temperature: {{ day.min_temp | number : '1.2-2' }} </p>
+    </div>
   </div>
 </div>
+

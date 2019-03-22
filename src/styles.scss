@@ -6,7 +6,8 @@
 }
 
 .box {
-    width: 80%;
+    display: inline-block;
+    width: 100%;
     margin: 20px auto;
     border: 2px solid black;
     box-shadow: 5px 5px 5px #ccc;
@@ -14,12 +15,18 @@
     background-color: #eee;
 }
 
+@media screen and (min-width: 500px) {
+    .box {
+        width: 100%;
+    }
+}
+
 @media screen and (min-width: 700px) {
     .box {
         font-size: 1.2rem;
-        max-width: 500px;
+        max-width: 600px;
         padding: 10px;
-        
+
         input, button {
             font-size: 1.2rem;
         }

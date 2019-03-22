@@ -13,14 +13,12 @@ export class SearchComponent implements OnInit {
   showSearch: boolean = false;
   submitSearch(city: string): void {
     this.showSearch = true;
-    console.log(city);
     this.cityService.getCities(city)
       .subscribe(citylist => this.results = citylist);
   }
+  
 
-  constructor(
-    private cityService: CityListService,
-  ) { }
+  constructor(private cityService: CityListService) { }
 
   ngOnInit() {}
 

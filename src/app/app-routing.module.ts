@@ -6,7 +6,7 @@ import { DetailComponent } from './detail/detail.component';
 const routes: Routes = [
   { path: '', redirectTo: '/search', pathMatch: 'full' },
   { path: 'search', component: SearchComponent },
-  { path: 'detail/:id', component: DetailComponent },
+  { path: 'detail/:id/:woeid', component: DetailComponent },
   { path: '**', redirectTo: '/search' }
 ];
 
