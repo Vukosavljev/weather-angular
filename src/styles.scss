@@ -1,1 +1,27 @@
-/* You can add global styles to this file, and also import other style files */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.box {
+    width: 80%;
+    margin: 20px auto;
+    border: 2px solid black;
+    box-shadow: 5px 5px 5px #ccc;
+    padding: 0;
+    background-color: #eee;
+}
+
+@media screen and (min-width: 700px) {
+    .box {
+        font-size: 1.2rem;
+        max-width: 500px;
+        padding: 10px;
+        
+        input, button {
+            font-size: 1.2rem;
+        }
+    }
+}
